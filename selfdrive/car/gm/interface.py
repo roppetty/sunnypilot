@@ -76,7 +76,8 @@ class CarInterface(CarInterfaceBase):
     if candidate in EV_CAR:
       ret.transmissionType = TransmissionType.direct
     else:
-      ret.transmissionType = TransmissionType.automatic
+      #TODO: determine from FP, testing hard-coded
+      ret.transmissionType = TransmissionType.manual
 
     ret.longitudinalTuning.deadzoneBP = [0.]
     ret.longitudinalTuning.deadzoneV = [0.15]
