@@ -119,7 +119,7 @@ class CarState(CarStateBase):
       ret.stockAeb = cam_cp.vl["AEBCmd"]["AEBCmdActive"] != 0
       # openpilot controls nonAdaptive when not pcmCruise
       if self.CP.pcmCruise:
-        ret.cruiseState.nonAdaptive = cam_cp.vl["ASCMActiveCruiseControlStatus"]["ACCCruiseState"] not in (2, 3)
+        ret.cruiseState.nonAdaptive = True#cam_cp.vl["ASCMActiveCruiseControlStatus"]["ACCCruiseState"] not in (2, 3)
 
     #TODO: Hack. Copied from OPGM for CC_ONLY_CAR, should setup a CC_ONLY_CAR type similar to OPGM
     ret.accFaulted = False
