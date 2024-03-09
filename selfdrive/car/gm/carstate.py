@@ -11,6 +11,7 @@ TransmissionType = car.CarParams.TransmissionType
 NetworkLocation = car.CarParams.NetworkLocation
 STANDSTILL_THRESHOLD = 10 * 0.0311 * CV.KPH_TO_MS
 
+GearShifter = car.CarState.GearShifter
 
 class CarState(CarStateBase):
   def __init__(self, CP):
